@@ -1,0 +1,12 @@
+.table-layout {
+    width: 100%;
+    table-layout: fixed;
+}
+
+.half-width {
+    width: 50%;
+}
+
+.align-top {
+    vertical-align: top;
+}
