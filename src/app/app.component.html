@@ -1,20 +1,17 @@
-<table border="1" style="width: 100%;">
+<table border="1" style="width: 100%; table-layout: fixed;">
     <tr>
         <td colspan="2">
             <app-header></app-header>
         </td>
     </tr>
     <tr>
-        <td style="vertical-align: top; width: 50%;">
+        <td style="width: 50%;">
             <app-work-experience></app-work-experience>
-        </td>
-        <td style="vertical-align: top; width: 50%;">
-            <app-skills></app-skills>
-        </td>
-    </tr>
-    <tr>
-        <td>
             <app-education></app-education>
-        </td>       
+        </td>
+        <td style="width: 50%; vertical-align: top;">
+            <app-skills></app-skills>
+            <app-languajes></app-languajes>
+        </td>
     </tr>
 </table>

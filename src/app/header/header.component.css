@@ -1,0 +1,51 @@
+.header-container {
+    display: flex;
+    justify-content: center; /* Alineación horizontal al centro */
+    align-items: center; /* Alineación vertical al centro */
+    background-color: #7088a4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .image {
+    display: flex; /* Habilita flexbox */
+    justify-content: center; /* Centra horizontalmente dentro de .image */
+    align-items: center; /* Centra verticalmente dentro de .image */
+    width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+  }
+  
+  .image img {
+    width: 120px; /* Mantiene el tamaño de la imagen */
+    height: 120px; /* Mantiene el tamaño de la imagen */
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 3px solid #080808; /* Borde blanco */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra alrededor de la imagen */
+  }
+  
+  .profile, .info {
+    flex: 1; /* Ajusta la proporción del espacio que cada uno toma */
+  }
+  .name {
+    white-space: nowrap;  /* Evita que el nombre se divida en varias líneas */
+    font-size: 28px;      /* Ajusta este valor según sea necesario */
+    text-align: center;   /* Centra el texto horizontalmente */
+    padding: 10px; 
+    font-weight: bold;
+  }
+  
+  .motto {
+    font-style: italic; /* Itálica para el lema/motto */
+    color: #555; /* Color gris para el texto */
+    font-size: 20px; 
+  }
+  
+.info ul {
+    list-style-type: none; /* Elimina los bullets de la lista */
+    padding: 0;
+    font-size: 1.5em;
+  }
+  
+  .info li {
+    padding: 5px 0; /* Espacio vertical entre ítems */
+  }

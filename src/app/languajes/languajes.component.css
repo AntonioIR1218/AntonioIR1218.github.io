@@ -1,0 +1,26 @@
+.languages-list {
+    margin: 20px;
+    padding: 0;
+  }
+  
+  .languages-list h3 {
+    margin-bottom: 10px;
+  }
+  
+  .languages-list ul {
+    display: flex;          /* Habilita flexbox */
+    flex-wrap: wrap;        /* Permite que los items se envuelvan si no hay espacio suficiente */
+    list-style-type: none;  /* Elimina los estilos de lista */
+    padding: 0;
+    gap: 10px;              /* Espacio entre los elementos de la lista */
+  }
+  
+  .languages-list li {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    flex: 1;                /* Asegura que los elementos se expandan para llenar el espacio */
+    min-width: 100px;       /* Define un ancho mínimo para cada elemento */
+    text-align: center;     /* Centra el texto dentro de cada cuadro */
+  }
+  
