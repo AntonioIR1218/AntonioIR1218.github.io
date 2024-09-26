@@ -1,51 +1,54 @@
 .header-container {
     display: flex;
-    justify-content: center; /* Alineación horizontal al centro */
-    align-items: center; /* Alineación vertical al centro */
-    background-color: #7088a4;
+    justify-content: center; 
+    align-items: center; 
+    background-color: #387cad;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
   
   .image {
-    display: flex; /* Habilita flexbox */
-    justify-content: center; /* Centra horizontalmente dentro de .image */
-    align-items: center; /* Centra verticalmente dentro de .image */
-    width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
   }
   
   .image img {
-    width: 120px; /* Mantiene el tamaño de la imagen */
-    height: 120px; /* Mantiene el tamaño de la imagen */
-    border-radius: 50%; /* Hace la imagen redonda */
-    border: 3px solid #080808; /* Borde blanco */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Sombra alrededor de la imagen */
+    width: 120px; 
+    height: 120px; 
+    border-radius: 50%; 
+    border: 3px solid #080808; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2); 
   }
   
   .profile, .info {
-    flex: 1; /* Ajusta la proporción del espacio que cada uno toma */
+    flex: 1; 
   }
   .name {
-    white-space: nowrap;  /* Evita que el nombre se divida en varias líneas */
-    font-size: 28px;      /* Ajusta este valor según sea necesario */
-    text-align: center;   /* Centra el texto horizontalmente */
+    white-space: nowrap;  
+    font-size: 28px;     
+    text-align: center;   
     padding: 10px; 
     font-weight: bold;
   }
   
   .motto {
-    font-style: italic; /* Itálica para el lema/motto */
-    color: #555; /* Color gris para el texto */
+    font-style: italic; 
+    color: #555; 
     font-size: 20px; 
   }
   
 .info ul {
-    list-style-type: none; /* Elimina los bullets de la lista */
+    list-style-type: none; 
     padding: 0;
-    font-size: 1.5em;
+    font-size: 1.0em;
+    text-align: justify;
+    font-weight: bold;
+
   }
   
   .info li {
-    padding: 5px 0; /* Espacio vertical entre ítems */
+    padding: 5px 0; 
   }

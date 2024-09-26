@@ -1,9 +1,9 @@
 div {
-    font-family: Arial, sans-serif; /* Establece una fuente limpia y moderna */
+    font-family: Arial, sans-serif; 
   }
   
   h3 {
-    text-align: center; /* Centra el encabezado */
-    color: #333; /* Color oscuro para el texto del encabezado */
-    margin-bottom: 20px; /* Espacio después del encabezado */
+    text-align: center; 
+    color: #333; 
+    margin-bottom: 20px; 
   }

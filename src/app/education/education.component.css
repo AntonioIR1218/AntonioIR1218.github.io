@@ -1,0 +1,46 @@
+.education-container {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f9f9fb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .education-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease;
+  }
+  
+  .education-item:hover {
+    transform: scale(1.02); 
+  }
+  
+  .education-fecha,
+  .education-ubicacion,
+  .education-titulo,
+  .education-institucion {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .education-fecha strong,
+  .education-ubicacion strong,
+  .education-titulo strong,
+  .education-institucion strong {
+    color: #387cad; 
+    font-weight: bold;
+  }
+  
+  h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #000000; 
+    text-align: left;
+  }
+  
+  

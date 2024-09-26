@@ -1,0 +1,75 @@
+.work-experience-container {
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f9f9fb;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+
+  .work-item {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #529cf1;
+  }
+  
+
+  .work-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  
+  .work-details {
+    font-size: 17px;
+    margin-bottom: 10px;
+  }
+  
+  .work-puesto {
+    font-weight: bold;
+    color: #387cad; 
+    font-size: 23px;
+  }
+  
+  .work-empresa {
+    font-style: italic;
+    color: #666;
+  }
+  
+  .work-logros h4 {
+    margin: 10px 0 5px 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .work-logros ul {
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .work-logros li {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: #000000; 
+  }
+  
+  h4 {
+    font-size: 18px;
+    color: #4a90e2;
+  }
+  
+  span {
+    display: block;
+  }
+  
