@@ -1,0 +1,9 @@
+<div class="achievement-section">
+    <h2>Achievements & Certificates</h2>
+    <ul>
+      <li *ngFor="let achievement of achievements">
+        <h3>{{ achievement.title }} <span *ngIf="achievement.year">({{ achievement.year }})</span></h3>
+        <p *ngIf="achievement.description">{{ achievement.description }}</p>
+      </li>
+    </ul>
+  </div>

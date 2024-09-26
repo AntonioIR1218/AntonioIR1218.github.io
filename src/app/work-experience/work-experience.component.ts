@@ -14,7 +14,7 @@ export class WorkExperienceComponent {
   ngOnInit(): void {
     let work1 = {
       fecha: "2018-2022",
-      ubicacion: "Ixtec Ver.",
+      ubicacion: "Ixtac, Ver.",
       puesto: "CEO",
       empresa: "Waves Lab",
       logros: [
@@ -32,7 +32,7 @@ export class WorkExperienceComponent {
       empresa: "Kubeet",
       logros: [
         {
-          descripcion: "CCreación de invernadero hidroptico"
+          descripcion: "Creación de invernadero hidroptico"
         },
         { descripcion: "Creacion de un dron autonomo" }
       ]
