@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV - Antonio IR</title>
   <style>
-    /* Reset básico */
-    * {
+    /* ── Reset ───────────────────────────────────────────────── */
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -19,8 +19,9 @@
       line-height: 1.6;
     }
 
+    /* ── Page wrapper ────────────────────────────────────────── */
     .container {
-      max-width: 900px;
+      max-width: 960px;
       margin: 40px auto;
       background: #fff;
       padding: 40px;
@@ -28,7 +29,7 @@
       border-radius: 6px;
     }
 
-    /* ── CV Header (matches header.html) ────────────────────── */
+    /* ── CV Header ───────────────────────────────────────────── */
     .cv-header {
       display: flex;
       align-items: center;
@@ -129,7 +130,241 @@
 
     .cv-header__contact .icon--github { background-color: #333; }
 
-    @media (max-width: 600px) {
+    /* ── Two-column body ─────────────────────────────────────── */
+    .cv-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 40px;
+    }
+
+    /* ── Section headings ────────────────────────────────────── */
+    .cv-section {
+      margin-bottom: 32px;
+    }
+
+    .cv-section__title {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #222;
+      border-bottom: 3px solid #e84040;
+      padding-bottom: 6px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Experience entries ───────────────────────────────────── */
+    .exp-entry {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .exp-entry__bar {
+      width: 8px;
+      flex-shrink: 0;
+      background-color: #e84040;
+      border-radius: 2px;
+      align-self: stretch;
+    }
+
+    .exp-entry__body { flex: 1; }
+
+    .exp-entry__meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.82rem;
+      color: #e84040;
+      margin-bottom: 2px;
+    }
+
+    .exp-entry__role {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 1px;
+    }
+
+    .exp-entry__company {
+      font-size: 0.92rem;
+      color: #333;
+      margin-bottom: 6px;
+    }
+
+    .exp-entry__accomplishments-label {
+      font-size: 0.85rem;
+      color: #e84040;
+      font-weight: 600;
+      margin-bottom: 3px;
+    }
+
+    .exp-entry__accomplishments p {
+      font-size: 0.88rem;
+      color: #333;
+      margin-bottom: 3px;
+    }
+
+    /* ── Education entries ───────────────────────────────────── */
+    .edu-entry {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .edu-entry__bar {
+      width: 8px;
+      flex-shrink: 0;
+      background-color: #e84040;
+      border-radius: 2px;
+      align-self: stretch;
+    }
+
+    .edu-entry__body { flex: 1; }
+
+    .edu-entry__dates {
+      font-size: 0.82rem;
+      color: #e84040;
+      margin-bottom: 2px;
+    }
+
+    .edu-entry__degree {
+      font-size: 0.98rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 1px;
+    }
+
+    .edu-entry__institution {
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    /* ── Skills chart ────────────────────────────────────────── */
+    .skills-chart {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      row-gap: 10px;
+      align-items: center;
+    }
+
+    .skills-chart__ticks-label { /* empty placeholder */ }
+
+    .skills-chart__ticks {
+      position: relative;
+      height: 16px;
+      margin-bottom: 2px;
+    }
+
+    .skills-chart__ticks::before,
+    .skills-chart__ticks::after,
+    .skills-chart__ticks .tick-mid1,
+    .skills-chart__ticks .tick-mid2 {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 10px;
+      background-color: #e84040;
+    }
+
+    .skills-chart__ticks::before  { left: 25%; }
+    .skills-chart__ticks .tick-mid1 { left: 50%; }
+    .skills-chart__ticks .tick-mid2 { left: 75%; }
+    .skills-chart__ticks::after   { left: 100%; }
+
+    .skill-label {
+      text-align: right;
+      font-size: 0.88rem;
+      color: #333;
+      padding-right: 14px;
+      line-height: 1.3;
+    }
+
+    .skill-bar {
+      height: 24px;
+      background-color: #f0f0f0;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .skill-bar__fill {
+      height: 100%;
+      background-color: #e84040;
+      border-radius: 2px;
+    }
+
+    /* ── Certifications ──────────────────────────────────────── */
+    .cert-entry {
+      margin-bottom: 16px;
+    }
+
+    .cert-entry__title {
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 3px;
+    }
+
+    .cert-entry__description {
+      font-size: 0.88rem;
+      color: #333;
+    }
+
+    /* ── Languages ───────────────────────────────────────────── */
+    .languages-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px 30px;
+    }
+
+    .language-card__name {
+      font-size: 0.92rem;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    .language-card__level {
+      font-size: 0.82rem;
+      color: #777;
+      margin-bottom: 6px;
+    }
+
+    .language-card__bar {
+      height: 5px;
+      background-color: #f0f0f0;
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .language-card__bar-fill {
+      height: 100%;
+      background-color: #e84040;
+      border-radius: 3px;
+    }
+
+    /* ── Interests ───────────────────────────────────────────── */
+    .interests-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      font-size: 0.92rem;
+      color: #333;
+    }
+
+    .interests-list li {
+      display: flex;
+      align-items: center;
+    }
+
+    .interests-list li + li::before {
+      content: "|";
+      margin: 0 7px;
+      color: #aaa;
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 700px) {
       .cv-header {
         flex-direction: column;
         text-align: center;
@@ -138,84 +373,25 @@
       .cv-header__bio { max-width: 100%; }
       .cv-header__contact { align-items: center; text-align: center; }
       .cv-header__contact li { justify-content: center; }
-    }
 
-    /* Secciones */
-    section {
-      margin-bottom: 28px;
-    }
+      .cv-body {
+        grid-template-columns: 1fr;
+      }
 
-    section h2 {
-      font-size: 1.3rem;
-      color: #3a7bd5;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 6px;
-      margin-bottom: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+      .skills-chart {
+        grid-template-columns: 130px 1fr;
+      }
 
-    /* Entradas (experiencia / educación) */
-    .entry {
-      margin-bottom: 16px;
-    }
-
-    .entry h3 {
-      font-size: 1rem;
-      font-weight: bold;
-      margin-bottom: 2px;
-    }
-
-    .entry .meta {
-      font-size: 0.88rem;
-      color: #777;
-      margin-bottom: 4px;
-    }
-
-    .entry p {
-      font-size: 0.95rem;
-    }
-
-    /* Habilidades */
-    .skills-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skills-list li {
-      background: #3a7bd5;
-      color: #fff;
-      padding: 5px 14px;
-      border-radius: 20px;
-      font-size: 0.88rem;
-    }
-
-    /* Contacto */
-    .contact-info {
-      list-style: none;
-    }
-
-    .contact-info li {
-      margin-bottom: 6px;
-      font-size: 0.95rem;
-    }
-
-    .contact-info a {
-      color: #3a7bd5;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
+      .languages-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- Cabecera / Perfil -->
+    <!-- ══ HEADER ══════════════════════════════════════════════ -->
     <header class="cv-header">
 
       <!-- ① Name + bio -->
@@ -284,72 +460,279 @@
 
     </header>
 
-    <!-- Sobre mí -->
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>
-        Desarrollador apasionado con experiencia en el diseño y construcción de
-        aplicaciones web. Orientado a la calidad del código, el aprendizaje
-        continuo y la colaboración en equipo.
-      </p>
-    </section>
+    <!-- ══ TWO-COLUMN BODY ══════════════════════════════════════ -->
+    <div class="cv-body">
 
-    <!-- Experiencia -->
-    <section id="experiencia">
-      <h2>Experiencia</h2>
+      <!-- ── LEFT COLUMN ──────────────────────────────────────── -->
+      <div class="cv-col cv-col--left">
 
-      <div class="entry">
-        <h3>Puesto — Empresa</h3>
-        <p class="meta">Fecha inicio – Fecha fin &nbsp;|&nbsp; Ubicación</p>
-        <p>Descripción breve de responsabilidades y logros principales.</p>
-      </div>
+        <!-- Esperienza Lavorativa -->
+        <section id="experiencia" class="cv-section">
+          <h2 class="cv-section__title">Esperienza Lavorativa</h2>
 
-      <div class="entry">
-        <h3>Puesto — Empresa</h3>
-        <p class="meta">Fecha inicio – Fecha fin &nbsp;|&nbsp; Ubicación</p>
-        <p>Descripción breve de responsabilidades y logros principales.</p>
-      </div>
-    </section>
+          <!-- SolarCity -->
+          <div class="exp-entry">
+            <div class="exp-entry__bar" aria-hidden="true"></div>
+            <div class="exp-entry__body">
+              <div class="exp-entry__meta">
+                <span>06/2006 – Presente</span>
+                <span>San Mateo, USA</span>
+              </div>
+              <p class="exp-entry__role">Presidente</p>
+              <p class="exp-entry__company">SolarCity</p>
+              <p class="exp-entry__accomplishments-label">Realizaciones</p>
+              <div class="exp-entry__accomplishments">
+                <p>Creó colaboración entre SolarCity y Tesla para usar las baterías de vehículos eléctricos para mitigar el impacto del solar sobre la red eléctrica.</p>
+                <p>Proporcionó el concepto inicial y el capital financiero.</p>
+              </div>
+            </div>
+          </div>
 
-    <!-- Educación -->
-    <section id="educacion">
-      <h2>Educación</h2>
+          <!-- Tesla Motors -->
+          <div class="exp-entry">
+            <div class="exp-entry__bar" aria-hidden="true"></div>
+            <div class="exp-entry__body">
+              <div class="exp-entry__meta">
+                <span>02/2004 – Presente</span>
+                <span>Palo Alto, USA</span>
+              </div>
+              <p class="exp-entry__role">Administrador delegado y Arquitecto del producto</p>
+              <p class="exp-entry__company">Tesla Motors</p>
+              <p class="exp-entry__accomplishments-label">Realizaciones</p>
+              <div class="exp-entry__accomplishments">
+                <p>Actualmente supervisando la estrategia de producto de la empresa, incluida la proyección, la ingeniería y la producción de vehículos eléctricos cada vez más accesibles.</p>
+                <p>Insistió en el uso de fibra de carbono para reducir al mínimo el peso, desarrolló módulos de batería y algunos elementos de diseño como los faros.</p>
+                <p>Recibió premio Global Green 2006 por el diseño del Tesla Roadster.</p>
+              </div>
+            </div>
+          </div>
 
-      <div class="entry">
-        <h3>Título — Institución</h3>
-        <p class="meta">Año inicio – Año fin</p>
-        <p>Descripción opcional del programa o logros académicos.</p>
-      </div>
-    </section>
+          <!-- SpaceX -->
+          <div class="exp-entry">
+            <div class="exp-entry__bar" aria-hidden="true"></div>
+            <div class="exp-entry__body">
+              <div class="exp-entry__meta">
+                <span>06/2002 – Presente</span>
+                <span>Hawthorne, USA</span>
+              </div>
+              <p class="exp-entry__role">Administrador delegado y Director Técnico</p>
+              <p class="exp-entry__company">Space X</p>
+              <p class="exp-entry__accomplishments-label">Realizaciones</p>
+              <div class="exp-entry__accomplishments">
+                <p>Planes para reducir los costes de transporte espacial para permitir a las personas colonizar Marte.</p>
+                <p>Supervisión del desarrollo de cohetes y vehículos espaciales para misiones en órbita terrestre y a otros planetas.</p>
+                <p>Desarrolló la nave Falcon 9 que ha sustituido lo space shuttle cuando fue retirado en 2011.</p>
+              </div>
+            </div>
+          </div>
 
-    <!-- Habilidades -->
-    <section id="habilidades">
-      <h2>Habilidades</h2>
-      <ul class="skills-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git</li>
-        <li>Trabajo en equipo</li>
-      </ul>
-    </section>
+          <!-- X.com / PayPal -->
+          <div class="exp-entry">
+            <div class="exp-entry__bar" aria-hidden="true"></div>
+            <div class="exp-entry__body">
+              <div class="exp-entry__meta">
+                <span>03/1999 – 10/2002</span>
+                <span>San Jose, USA</span>
+              </div>
+              <p class="exp-entry__role">Administrador delegado</p>
+              <p class="exp-entry__company">X.com e PayPal</p>
+              <p class="exp-entry__accomplishments-label">Realizaciones</p>
+              <div class="exp-entry__accomplishments">
+                <p>Desarrolló nuevos modelos de negocio, condujo una campaña de marketing viral que lo llevó a un rápido aumento del número de clientes.</p>
+                <p>Creó un método para transferir dinero en modo seguro usando la dirección e-mail del destinatario.</p>
+              </div>
+            </div>
+          </div>
 
-    <!-- Contacto -->
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <ul class="contact-info">
-        <li>
-          <span aria-hidden="true">📧</span>
-          <a href="mailto:correo@ejemplo.com" aria-label="Enviar correo a correo@ejemplo.com">correo@ejemplo.com</a>
-        </li>
-        <li>
-          <span aria-hidden="true">🔗</span>
-          <a href="https://github.com/AntonioIR1218" target="_blank" rel="noopener noreferrer"
-             aria-label="Perfil de GitHub de AntonioIR1218 (abre en una nueva pestaña)">github.com/AntonioIR1218</a>
-        </li>
-      </ul>
-    </section>
+          <!-- Zip2 -->
+          <div class="exp-entry">
+            <div class="exp-entry__bar" aria-hidden="true"></div>
+            <div class="exp-entry__body">
+              <div class="exp-entry__meta">
+                <span>01/1995 – 02/1999</span>
+                <span>California, USA</span>
+              </div>
+              <p class="exp-entry__role">Co-fundador</p>
+              <p class="exp-entry__company">Zip2</p>
+              <p class="exp-entry__accomplishments-label">Realizaciones</p>
+              <div class="exp-entry__accomplishments">
+                <p>Creó una plataforma en la que los diarios, como il New York Times, podían ofrecer a los clientes servicios comerciales adicionales.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-  </div>
+        <!-- Educación -->
+        <section id="educacion" class="cv-section">
+          <h2 class="cv-section__title">Istruzione</h2>
+
+          <div class="edu-entry">
+            <div class="edu-entry__bar" aria-hidden="true"></div>
+            <div class="edu-entry__body">
+              <p class="edu-entry__dates">09/1992 – 06/1995</p>
+              <p class="edu-entry__degree">Laurea in Economia</p>
+              <p class="edu-entry__institution">Wharton School – Università della Pennsylvania</p>
+            </div>
+          </div>
+
+          <div class="edu-entry">
+            <div class="edu-entry__bar" aria-hidden="true"></div>
+            <div class="edu-entry__body">
+              <p class="edu-entry__dates">09/1992 – 06/1995</p>
+              <p class="edu-entry__degree">Corso di laurea in Fisica</p>
+              <p class="edu-entry__institution">Wharton School – Università della Pennsylvania</p>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /left column -->
+
+      <!-- ── RIGHT COLUMN ─────────────────────────────────────── -->
+      <div class="cv-col cv-col--right">
+
+        <!-- Habilidades y Competencias -->
+        <section id="habilidades" class="cv-section">
+          <h2 class="cv-section__title">Abilità e Competenze</h2>
+
+          <div class="skills-chart" aria-label="Gráfico de habilidades">
+
+            <!-- Tick marks header row -->
+            <div class="skills-chart__ticks-label" aria-hidden="true"></div>
+            <div class="skills-chart__ticks" aria-hidden="true">
+              <span class="tick-mid1"></span>
+              <span class="tick-mid2"></span>
+            </div>
+
+            <p class="skill-label">Pensare attraverso i primi<br>principi</p>
+            <div class="skill-bar" aria-label="Pensare attraverso i primi principi: 96%">
+              <div class="skill-bar__fill" style="width: 96%;"></div>
+            </div>
+
+            <p class="skill-label">Micromanaging</p>
+            <div class="skill-bar" aria-label="Micromanaging: 82%">
+              <div class="skill-bar__fill" style="width: 82%;"></div>
+            </div>
+
+            <p class="skill-label">Orientamento al risultato</p>
+            <div class="skill-bar" aria-label="Orientamento al risultato: 94%">
+              <div class="skill-bar__fill" style="width: 94%;"></div>
+            </div>
+
+            <p class="skill-label">Focalizzazione sul futuro</p>
+            <div class="skill-bar" aria-label="Focalizzazione sul futuro: 91%">
+              <div class="skill-bar__fill" style="width: 91%;"></div>
+            </div>
+
+            <p class="skill-label">Pensiero critico</p>
+            <div class="skill-bar" aria-label="Pensiero critico: 83%">
+              <div class="skill-bar__fill" style="width: 83%;"></div>
+            </div>
+
+            <p class="skill-label">Resilienza</p>
+            <div class="skill-bar" aria-label="Resilienza: 95%">
+              <div class="skill-bar__fill" style="width: 95%;"></div>
+            </div>
+
+            <p class="skill-label">Comunicazione verbale<br>e scritta</p>
+            <div class="skill-bar" aria-label="Comunicazione verbale e scritta: 68%">
+              <div class="skill-bar__fill" style="width: 68%;"></div>
+            </div>
+
+            <p class="skill-label">Comando</p>
+            <div class="skill-bar" aria-label="Comando: 89%">
+              <div class="skill-bar__fill" style="width: 89%;"></div>
+            </div>
+
+            <p class="skill-label">Creatività</p>
+            <div class="skill-bar" aria-label="Creatività: 76%">
+              <div class="skill-bar__fill" style="width: 76%;"></div>
+            </div>
+
+            <p class="skill-label">Gestione del tempo</p>
+            <div class="skill-bar" aria-label="Gestione del tempo: 95%">
+              <div class="skill-bar__fill" style="width: 95%;"></div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Certificaciones -->
+        <section id="certificaciones" class="cv-section">
+          <h2 class="cv-section__title">Risultati e Certificazioni</h2>
+
+          <div class="cert-entry">
+            <p class="cert-entry__title">IEEE Iscrizione onoraria (2015)</p>
+            <p class="cert-entry__description">Data a chi ha reso un servizio meritorio all'umanità nei campi di interesse designati dall'IEEE.</p>
+          </div>
+
+          <div class="cert-entry">
+            <p class="cert-entry__title">Uomo d'affari dell'anno - Fortune Magazine (2013)</p>
+            <p class="cert-entry__description">Premio ricevuto per le seguenti società: "SpaceX", "Tesla Motors" e "SolarCity"</p>
+          </div>
+
+          <div class="cert-entry">
+            <p class="cert-entry__title">FAI Gold Space Medal (2010)</p>
+            <p class="cert-entry__description">Uno dei massimi riconoscimenti nel settore aerospaziale, condiviso con eminenti personalità come Neil Armstrong e John Glenn.</p>
+          </div>
+
+          <div class="cert-entry">
+            <p class="cert-entry__title">Dottorato onorario in Design – Art Center College of Design</p>
+          </div>
+
+          <div class="cert-entry">
+            <p class="cert-entry__title">Dottorato onorario (DUniv) in Ingegneria Aerospaziale – Università del Surrey</p>
+          </div>
+
+          <div class="cert-entry">
+            <p class="cert-entry__title">Dottorato onorario di ingegneria e tecnologia – Yale University</p>
+          </div>
+        </section>
+
+        <!-- Idiomas -->
+        <section id="lingue" class="cv-section">
+          <h2 class="cv-section__title">Lingue</h2>
+
+          <div class="languages-grid" aria-label="Idiomas y niveles de dominio">
+
+            <div class="language-card">
+              <p class="language-card__name">Inglese</p>
+              <p class="language-card__level">Madrelingua</p>
+              <div class="language-card__bar" aria-label="Inglese: Madrelingua">
+                <div class="language-card__bar-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+
+            <div class="language-card">
+              <p class="language-card__name">Afrikaans</p>
+              <p class="language-card__level">Madrelingua</p>
+              <div class="language-card__bar" aria-label="Afrikaans: Madrelingua">
+                <div class="language-card__bar-fill" style="width: 100%;"></div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- Intereses -->
+        <section id="interessi" class="cv-section">
+          <h2 class="cv-section__title">Interessi</h2>
+
+          <ul class="interests-list" aria-label="Intereses personales y profesionales">
+            <li>Fisica</li>
+            <li>Sostenibilità</li>
+            <li>Filantropia</li>
+            <li>Vita extraterrestre</li>
+            <li>Fonti di energia alternative</li>
+            <li>Ingegneria spaziale</li>
+            <li>Lettura</li>
+            <li>Videogiochi</li>
+          </ul>
+        </section>
+
+      </div><!-- /right column -->
+
+    </div><!-- /cv-body -->
+
+  </div><!-- /container -->
 </body>
 </html>
