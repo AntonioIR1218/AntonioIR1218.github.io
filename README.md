@@ -2,7 +2,7 @@
 
 Sitio web personal (CV) de Antonio IR, desplegado en GitHub Pages.
 
-🌐 **URL pública:** https://antonioIR1218.github.io
+🌐 **URL pública:** https://AntonioIR1218.github.io
 
 ## Despliegue
 
