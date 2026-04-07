@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Achievements &amp; Certificates – Antonio IR</title>
+  <style>
+    /* ── Reset ───────────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ── Page wrapper (matches index.html container) ─────────── */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+    }
+
+    /* ── Section title ───────────────────────────────────────── */
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 28px;
+    }
+
+    /* ── Certification entry ─────────────────────────────────── */
+    .cert-entry {
+      margin-bottom: 24px;
+    }
+
+    /* Title (bold) with optional year */
+    .cert-entry__title {
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 4px;
+    }
+
+    /* Description text */
+    .cert-entry__description {
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    /* ── Honorary doctorate entries (larger, no description) ─── */
+    .cert-entry--honorary .cert-entry__title {
+      font-size: 1.25rem;
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1 class="section-title">Achievements &amp; Certificates</h1>
+
+    <!-- ── IEEE Honorary Membership ──────────────────────────── -->
+    <div class="cert-entry">
+      <p class="cert-entry__title">IEEE Honorary Membership (2015)</p>
+      <p class="cert-entry__description">Given to people who have rendered meritorious service to humanity in the IEEE's designated fields of interest.</p>
+    </div>
+
+    <!-- ── Businessperson of the Year ────────────────────────── -->
+    <div class="cert-entry">
+      <p class="cert-entry__title">Businessperson of the Year by Fortune Magazine (2013)</p>
+      <p class="cert-entry__description">Prize received for the following companies: 'SpaceX', 'Tesla Motors' and 'SolarCity'</p>
+    </div>
+
+    <!-- ── FAI Gold Space Medal ───────────────────────────────── -->
+    <div class="cert-entry">
+      <p class="cert-entry__title">FAI Gold Space Medal (2010)</p>
+      <p class="cert-entry__description">One of the highest honors in the aerospace industry, shared with prominent personalities like Neil Armstrong and John Glenn.</p>
+    </div>
+
+    <!-- ── Honorary doctorate: Art Center College of Design ───── -->
+    <div class="cert-entry cert-entry--honorary">
+      <p class="cert-entry__title">Honorary doctorate in Design from the Art Center College of Design</p>
+    </div>
+
+    <!-- ── Honorary doctorate: University of Surrey ──────────── -->
+    <div class="cert-entry cert-entry--honorary">
+      <p class="cert-entry__title">Honorary doctorate (DUniv) in Aerospace Engineering from the University of Surrey</p>
+    </div>
+
+    <!-- ── Honorary doctorate: Yale University ───────────────── -->
+    <div class="cert-entry cert-entry--honorary">
+      <p class="cert-entry__title">Honorary doctorate of Engineering and Technology from Yale University</p>
+    </div>
+
+  </div>
+</body>
+</html>
