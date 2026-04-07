@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Educación – Antonio IR</title>
+  <style>
+    /* ── Reset ───────────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ── Page wrapper (matches index.html container) ─────────── */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+    }
+
+    /* ── Section title ───────────────────────────────────────── */
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 28px;
+    }
+
+    /* ── Education entry ─────────────────────────────────────── */
+    .edu-entry {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    /* Red accent bar on the left of each entry */
+    .edu-entry__bar {
+      width: 10px;
+      flex-shrink: 0;
+      background-color: #e84040;
+      border-radius: 2px;
+      align-self: stretch;
+    }
+
+    .edu-entry__body {
+      flex: 1;
+    }
+
+    /* Date range */
+    .edu-entry__dates {
+      font-size: 0.88rem;
+      color: #e84040;
+      margin-bottom: 4px;
+    }
+
+    /* Degree (bold) */
+    .edu-entry__degree {
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 2px;
+    }
+
+    /* Institution name */
+    .edu-entry__institution {
+      font-size: 0.98rem;
+      color: #333;
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1 class="section-title">Education</h1>
+
+    <!-- ── Entry 1: Bachelor of Science in Economics ─────────── -->
+    <div class="edu-entry">
+      <div class="edu-entry__bar" aria-hidden="true"></div>
+      <div class="edu-entry__body">
+        <p class="edu-entry__dates">09/1992 - 06/1995</p>
+        <p class="edu-entry__degree">Bachelor of Science in Economics</p>
+        <p class="edu-entry__institution">Wharton School of the University of Pennsylvania</p>
+      </div>
+    </div>
+
+    <!-- ── Entry 2: Bachelor of Science in Physics ───────────── -->
+    <div class="edu-entry">
+      <div class="edu-entry__bar" aria-hidden="true"></div>
+      <div class="edu-entry__body">
+        <p class="edu-entry__dates">09/1992 - 06/1995</p>
+        <p class="edu-entry__degree">Bachelor of Science in Physics</p>
+        <p class="edu-entry__institution">Penn's College of Arts and Sciences</p>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
