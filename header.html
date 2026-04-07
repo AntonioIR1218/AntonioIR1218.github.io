@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV - Antonio IR</title>
+  <title>Header – Antonio IR</title>
   <style>
-    /* Reset básico */
-    * {
+    /* ── Reset ───────────────────────────────────────────────── */
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
@@ -16,9 +16,9 @@
       font-family: Arial, sans-serif;
       background-color: #f4f4f4;
       color: #333;
-      line-height: 1.6;
     }
 
+    /* ── Page wrapper (matches index.html container) ─────────── */
     .container {
       max-width: 900px;
       margin: 40px auto;
@@ -28,17 +28,19 @@
       border-radius: 6px;
     }
 
-    /* ── CV Header (matches header.html) ────────────────────── */
+    /* ── Header card ─────────────────────────────────────────── */
     .cv-header {
       display: flex;
       align-items: center;
       gap: 32px;
       padding-bottom: 24px;
       border-bottom: 3px solid #e84040;
-      margin-bottom: 30px;
     }
 
-    .cv-header__info { flex: 1; }
+    /* Left column – name & bio */
+    .cv-header__info {
+      flex: 1;
+    }
 
     .cv-header__name-row {
       display: flex;
@@ -47,6 +49,7 @@
       margin-bottom: 12px;
     }
 
+    /* Blue accent bar next to name */
     .cv-header__accent-bar {
       width: 12px;
       height: 52px;
@@ -78,7 +81,10 @@
       max-width: 280px;
     }
 
-    .cv-header__photo-wrap { flex-shrink: 0; }
+    /* Center column – profile photo */
+    .cv-header__photo-wrap {
+      flex-shrink: 0;
+    }
 
     .cv-header__photo {
       width: 130px;
@@ -89,6 +95,7 @@
       display: block;
     }
 
+    /* Right column – contact info */
     .cv-header__contact {
       flex-shrink: 0;
       list-style: none;
@@ -112,7 +119,9 @@
       text-decoration: none;
     }
 
-    .cv-header__contact a:hover { text-decoration: underline; }
+    .cv-header__contact a:hover {
+      text-decoration: underline;
+    }
 
     .cv-header__contact .icon {
       display: inline-flex;
@@ -127,98 +136,43 @@
       flex-shrink: 0;
     }
 
-    .cv-header__contact .icon--github { background-color: #333; }
+    /* GitHub icon keeps its brand colour */
+    .cv-header__contact .icon--github {
+      background-color: #333;
+    }
 
+    /* ── Responsive: stack on small screens ──────────────────── */
     @media (max-width: 600px) {
       .cv-header {
         flex-direction: column;
         text-align: center;
       }
-      .cv-header__name-row { justify-content: center; }
-      .cv-header__bio { max-width: 100%; }
-      .cv-header__contact { align-items: center; text-align: center; }
-      .cv-header__contact li { justify-content: center; }
-    }
 
-    /* Secciones */
-    section {
-      margin-bottom: 28px;
-    }
+      .cv-header__name-row {
+        justify-content: center;
+      }
 
-    section h2 {
-      font-size: 1.3rem;
-      color: #3a7bd5;
-      border-bottom: 1px solid #ddd;
-      padding-bottom: 6px;
-      margin-bottom: 14px;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-    }
+      .cv-header__bio {
+        max-width: 100%;
+      }
 
-    /* Entradas (experiencia / educación) */
-    .entry {
-      margin-bottom: 16px;
-    }
+      .cv-header__contact {
+        align-items: center;
+        text-align: center;
+      }
 
-    .entry h3 {
-      font-size: 1rem;
-      font-weight: bold;
-      margin-bottom: 2px;
-    }
-
-    .entry .meta {
-      font-size: 0.88rem;
-      color: #777;
-      margin-bottom: 4px;
-    }
-
-    .entry p {
-      font-size: 0.95rem;
-    }
-
-    /* Habilidades */
-    .skills-list {
-      list-style: none;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-
-    .skills-list li {
-      background: #3a7bd5;
-      color: #fff;
-      padding: 5px 14px;
-      border-radius: 20px;
-      font-size: 0.88rem;
-    }
-
-    /* Contacto */
-    .contact-info {
-      list-style: none;
-    }
-
-    .contact-info li {
-      margin-bottom: 6px;
-      font-size: 0.95rem;
-    }
-
-    .contact-info a {
-      color: #3a7bd5;
-      text-decoration: none;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
+      .cv-header__contact li {
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
 
-    <!-- Cabecera / Perfil -->
     <header class="cv-header">
 
-      <!-- ① Name + bio -->
+      <!-- ① Name + bio ---------------------------------------- -->
       <div class="cv-header__info">
         <div class="cv-header__name-row">
           <span class="cv-header__accent-bar" aria-hidden="true"></span>
@@ -232,7 +186,7 @@
         </p>
       </div>
 
-      <!-- ② Profile photo -->
+      <!-- ② Profile photo ------------------------------------- -->
       <div class="cv-header__photo-wrap">
         <img
           class="cv-header__photo"
@@ -241,7 +195,7 @@
         />
       </div>
 
-      <!-- ③ Contact info -->
+      <!-- ③ Contact info -------------------------------------- -->
       <ul class="cv-header__contact" aria-label="Información de contacto">
         <li>
           <a href="mailto:correo@ejemplo.com" aria-label="Enviar correo">correo@ejemplo.com</a>
@@ -283,72 +237,6 @@
       </ul>
 
     </header>
-
-    <!-- Sobre mí -->
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>
-        Desarrollador apasionado con experiencia en el diseño y construcción de
-        aplicaciones web. Orientado a la calidad del código, el aprendizaje
-        continuo y la colaboración en equipo.
-      </p>
-    </section>
-
-    <!-- Experiencia -->
-    <section id="experiencia">
-      <h2>Experiencia</h2>
-
-      <div class="entry">
-        <h3>Puesto — Empresa</h3>
-        <p class="meta">Fecha inicio – Fecha fin &nbsp;|&nbsp; Ubicación</p>
-        <p>Descripción breve de responsabilidades y logros principales.</p>
-      </div>
-
-      <div class="entry">
-        <h3>Puesto — Empresa</h3>
-        <p class="meta">Fecha inicio – Fecha fin &nbsp;|&nbsp; Ubicación</p>
-        <p>Descripción breve de responsabilidades y logros principales.</p>
-      </div>
-    </section>
-
-    <!-- Educación -->
-    <section id="educacion">
-      <h2>Educación</h2>
-
-      <div class="entry">
-        <h3>Título — Institución</h3>
-        <p class="meta">Año inicio – Año fin</p>
-        <p>Descripción opcional del programa o logros académicos.</p>
-      </div>
-    </section>
-
-    <!-- Habilidades -->
-    <section id="habilidades">
-      <h2>Habilidades</h2>
-      <ul class="skills-list">
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Git</li>
-        <li>Trabajo en equipo</li>
-      </ul>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <ul class="contact-info">
-        <li>
-          <span aria-hidden="true">📧</span>
-          <a href="mailto:correo@ejemplo.com" aria-label="Enviar correo a correo@ejemplo.com">correo@ejemplo.com</a>
-        </li>
-        <li>
-          <span aria-hidden="true">🔗</span>
-          <a href="https://github.com/AntonioIR1218" target="_blank" rel="noopener noreferrer"
-             aria-label="Perfil de GitHub de AntonioIR1218 (abre en una nueva pestaña)">github.com/AntonioIR1218</a>
-        </li>
-      </ul>
-    </section>
 
   </div>
 </body>
