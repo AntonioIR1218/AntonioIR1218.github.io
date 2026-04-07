@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiencia Laboral – Antonio IR</title>
+  <style>
+    /* ── Reset ───────────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ── Page wrapper (matches index.html container) ─────────── */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+    }
+
+    /* ── Section title ───────────────────────────────────────── */
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 28px;
+    }
+
+    /* ── Experience entry ────────────────────────────────────── */
+    .exp-entry {
+      display: flex;
+      gap: 18px;
+      margin-bottom: 32px;
+    }
+
+    /* Red accent bar on the left of each entry */
+    .exp-entry__bar {
+      width: 10px;
+      flex-shrink: 0;
+      background-color: #e84040;
+      border-radius: 2px;
+      min-height: 100%;
+      align-self: stretch;
+    }
+
+    .exp-entry__body {
+      flex: 1;
+    }
+
+    /* Date + location row */
+    .exp-entry__meta {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.88rem;
+      color: #e84040;
+      margin-bottom: 4px;
+    }
+
+    /* Role (bold) */
+    .exp-entry__role {
+      font-size: 1.15rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 2px;
+    }
+
+    /* Company name */
+    .exp-entry__company {
+      font-size: 0.98rem;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    /* "Accomplishments" label */
+    .exp-entry__accomplishments-label {
+      font-size: 0.92rem;
+      color: #e84040;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    /* Accomplishment paragraphs */
+    .exp-entry__accomplishments p {
+      font-size: 0.95rem;
+      color: #333;
+      margin-bottom: 4px;
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .exp-entry__meta {
+        flex-direction: column;
+        gap: 2px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1 class="section-title">Work Experience</h1>
+
+    <!-- ── Entry 1: SolarCity ─────────────────────────────────── -->
+    <div class="exp-entry">
+      <div class="exp-entry__bar" aria-hidden="true"></div>
+      <div class="exp-entry__body">
+        <div class="exp-entry__meta">
+          <span>06/2006 – Present</span>
+          <span>San Mateo, USA</span>
+        </div>
+        <p class="exp-entry__role">Chairman</p>
+        <p class="exp-entry__company">SolarCity</p>
+        <p class="exp-entry__accomplishments-label">Accomplishments</p>
+        <div class="exp-entry__accomplishments">
+          <p>Created a collaboration between SolarCity and Tesla to use electric vehicle batteries to smooth the impact of rooftop solar on the power grid.</p>
+          <p>Provided the initial concept and financial capital.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Entry 2: Tesla Motors ──────────────────────────────── -->
+    <div class="exp-entry">
+      <div class="exp-entry__bar" aria-hidden="true"></div>
+      <div class="exp-entry__body">
+        <div class="exp-entry__meta">
+          <span>02/2004 – Present</span>
+          <span>Palo Alto, USA</span>
+        </div>
+        <p class="exp-entry__role">CEO and Product Architect</p>
+        <p class="exp-entry__company">Tesla Motors</p>
+        <p class="exp-entry__accomplishments-label">Accomplishments</p>
+        <div class="exp-entry__accomplishments">
+          <p>Currently oversee the company's product strategy — including the design, engineering and manufacturing of more and more affordable electric vehicles for mainstream consumers.</p>
+          <p>Insisted on using carbon fiber composite materials in the hull to minimize weight, developed the battery module and even some elements of design, like the headlights.</p>
+          <p>Received Global Green 2006 product design award for Tesla Roadster design.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Entry 3: SpaceX ────────────────────────────────────── -->
+    <div class="exp-entry">
+      <div class="exp-entry__bar" aria-hidden="true"></div>
+      <div class="exp-entry__body">
+        <div class="exp-entry__meta">
+          <span>06/2002 – Present</span>
+          <span>Hawthorne, USA</span>
+        </div>
+        <p class="exp-entry__role">CEO and CTO</p>
+        <p class="exp-entry__company">SpaceX</p>
+        <p class="exp-entry__accomplishments-label">Accomplishments</p>
+        <div class="exp-entry__accomplishments">
+          <p>Plans to reduce space transportation costs to enable people to colonize Mars.</p>
+          <p>Oversee the development of rockets and spacecraft for missions to Earth orbit and ultimately to other planets.</p>
+          <p>Developed the Falcon 9 spacecraft which replaced the space shuttle when it retired in 2011.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
