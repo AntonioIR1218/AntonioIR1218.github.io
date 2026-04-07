@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills – Antonio IR</title>
+  <style>
+    /* ── Reset ───────────────────────────────────────────────── */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* ── Page wrapper (matches index.html container) ─────────── */
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+    }
+
+    /* ── Section title ───────────────────────────────────────── */
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #222;
+      margin-bottom: 32px;
+    }
+
+    /* ── Skills chart wrapper ────────────────────────────────── */
+    .skills-chart {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      row-gap: 12px;
+      align-items: center;
+    }
+
+    /* ── Tick marks header row ───────────────────────────────── */
+    .skills-chart__ticks-label {
+      /* empty left cell above the labels column */
+    }
+
+    .skills-chart__ticks {
+      position: relative;
+      height: 18px;
+      margin-bottom: 4px;
+    }
+
+    .skills-chart__ticks::before,
+    .skills-chart__ticks::after,
+    .skills-chart__ticks .tick-mid1,
+    .skills-chart__ticks .tick-mid2 {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 1px;
+      height: 10px;
+      background-color: #e84040;
+    }
+
+    .skills-chart__ticks::before { left: 25%; }
+    .skills-chart__ticks .tick-mid1 { left: 50%; }
+    .skills-chart__ticks .tick-mid2 { left: 75%; }
+    .skills-chart__ticks::after  { left: 100%; }
+
+    /* ── Skill label (left column) ───────────────────────────── */
+    .skill-label {
+      text-align: right;
+      font-size: 0.92rem;
+      color: #333;
+      padding-right: 16px;
+      line-height: 1.3;
+    }
+
+    /* ── Bar track + fill (right column) ────────────────────── */
+    .skill-bar {
+      height: 28px;
+      background-color: #f0f0f0;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .skill-bar__fill {
+      height: 100%;
+      background-color: #e84040;
+      border-radius: 2px;
+    }
+
+    /* ── Responsive ──────────────────────────────────────────── */
+    @media (max-width: 600px) {
+      .container {
+        margin: 20px;
+        padding: 24px;
+      }
+
+      .skills-chart {
+        grid-template-columns: 140px 1fr;
+      }
+
+      .skill-label {
+        font-size: 0.82rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <h1 class="section-title">Skills &amp; Competences</h1>
+
+    <div class="skills-chart" aria-label="Skills and competences chart">
+
+      <!-- Tick marks header row -->
+      <div class="skills-chart__ticks-label" aria-hidden="true"></div>
+      <div class="skills-chart__ticks" aria-hidden="true">
+        <span class="tick-mid1"></span>
+        <span class="tick-mid2"></span>
+      </div>
+
+      <!-- Thinking through first principles -->
+      <p class="skill-label">Thinking through first<br>principles</p>
+      <div class="skill-bar" aria-label="Thinking through first principles: 96%">
+        <div class="skill-bar__fill" style="width: 96%;"></div>
+      </div>
+
+      <!-- Micromanaging -->
+      <p class="skill-label">Micromanaging</p>
+      <div class="skill-bar" aria-label="Micromanaging: 82%">
+        <div class="skill-bar__fill" style="width: 82%;"></div>
+      </div>
+
+      <!-- Goal oriented -->
+      <p class="skill-label">Goal oriented</p>
+      <div class="skill-bar" aria-label="Goal oriented: 94%">
+        <div class="skill-bar__fill" style="width: 94%;"></div>
+      </div>
+
+      <!-- Future focused -->
+      <p class="skill-label">Future focused</p>
+      <div class="skill-bar" aria-label="Future focused: 91%">
+        <div class="skill-bar__fill" style="width: 91%;"></div>
+      </div>
+
+      <!-- Critical thinking -->
+      <p class="skill-label">Critical thinking</p>
+      <div class="skill-bar" aria-label="Critical thinking: 83%">
+        <div class="skill-bar__fill" style="width: 83%;"></div>
+      </div>
+
+      <!-- Resiliency -->
+      <p class="skill-label">Resiliency</p>
+      <div class="skill-bar" aria-label="Resiliency: 95%">
+        <div class="skill-bar__fill" style="width: 95%;"></div>
+      </div>
+
+      <!-- Verbal and written communication -->
+      <p class="skill-label">Verbal and written<br>communication</p>
+      <div class="skill-bar" aria-label="Verbal and written communication: 68%">
+        <div class="skill-bar__fill" style="width: 68%;"></div>
+      </div>
+
+      <!-- Leadership -->
+      <p class="skill-label">Leadership</p>
+      <div class="skill-bar" aria-label="Leadership: 89%">
+        <div class="skill-bar__fill" style="width: 89%;"></div>
+      </div>
+
+      <!-- Creativity -->
+      <p class="skill-label">Creativity</p>
+      <div class="skill-bar" aria-label="Creativity: 76%">
+        <div class="skill-bar__fill" style="width: 76%;"></div>
+      </div>
+
+      <!-- Time Management -->
+      <p class="skill-label">Time Management</p>
+      <div class="skill-bar" aria-label="Time Management: 95%">
+        <div class="skill-bar__fill" style="width: 95%;"></div>
+      </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
