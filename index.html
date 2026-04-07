@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Antonio IR</title>
+  <style>
+    /* Reset básico */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+      border-radius: 6px;
+    }
+
+    /* Cabecera */
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 2px solid #3a7bd5;
+      padding-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      color: #3a7bd5;
+      margin-bottom: 6px;
+    }
+
+    header p {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Secciones */
+    section {
+      margin-bottom: 28px;
+    }
+
+    section h2 {
+      font-size: 1.3rem;
+      color: #3a7bd5;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Entradas (experiencia / educación) */
+    .entry {
+      margin-bottom: 16px;
+    }
+
+    .entry h3 {
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
+    .entry .meta {
+      font-size: 0.88rem;
+      color: #777;
+      margin-bottom: 4px;
+    }
+
+    .entry p {
+      font-size: 0.95rem;
+    }
+
+    /* Habilidades */
+    .skills-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills-list li {
+      background: #3a7bd5;
+      color: #fff;
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+    }
+
+    /* Contacto */
+    .contact-info {
+      list-style: none;
+    }
+
+    .contact-info li {
+      margin-bottom: 6px;
+      font-size: 0.95rem;
+    }
+
+    .contact-info a {
+      color: #3a7bd5;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <!-- Cabecera / Perfil -->
+    <header>
+      <h1>Antonio IR</h1>
+      <p>Desarrollador de Software &nbsp;|&nbsp; México</p>
+    </header>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi">
+      <h2>Sobre mí</h2>
+      <p>
+        Desarrollador apasionado con experiencia en el diseño y construcción de
+        aplicaciones web. Orientado a la calidad del código, el aprendizaje
+        continuo y la colaboración en equipo.
+      </p>
+    </section>
+
+    <!-- Experiencia -->
+    <section id="experiencia">
+      <h2>Experiencia</h2>
+
+      <div class="entry">
+        <h3>Puesto — Empresa</h3>
+        <p class="meta">Fecha inicio – Fecha fin &nbsp;|&nbsp; Ubicación</p>
+        <p>Descripción breve de responsabilidades y logros principales.</p>
+      </div>
+
+      <div class="entry">
+        <h3>Puesto — Empresa</h3>
+        <p class="meta">Fecha inicio – Fecha fin &nbsp;|&nbsp; Ubicación</p>
+        <p>Descripción breve de responsabilidades y logros principales.</p>
+      </div>
+    </section>
+
+    <!-- Educación -->
+    <section id="educacion">
+      <h2>Educación</h2>
+
+      <div class="entry">
+        <h3>Título — Institución</h3>
+        <p class="meta">Año inicio – Año fin</p>
+        <p>Descripción opcional del programa o logros académicos.</p>
+      </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+      <h2>Habilidades</h2>
+      <ul class="skills-list">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Git</li>
+        <li>Trabajo en equipo</li>
+      </ul>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <ul class="contact-info">
+        <li>📧 <a href="mailto:correo@ejemplo.com">correo@ejemplo.com</a></li>
+        <li>🔗 <a href="https://github.com/AntonioIR1218" target="_blank" rel="noopener noreferrer">github.com/AntonioIR1218</a></li>
+      </ul>
+    </section>
+
+  </div>
+</body>
+</html>
